@@ -4,9 +4,11 @@ const validate = (method) => {
   switch (method) {
     case "add": {
       return [
-        check("productname", "กรอกชื่อสินค้า").isLength({ min: 5 }),
-        check("productdescription", "กรอกคำอธิบาย").isLength({ min: 5 }),
-        check("productprice", "กรอกราคา").isInt({ gt: 0 }),
+        check("productname", "กรอกชื่อสินค้าให้ถูกต้อง").isLength({ min: 5 }),
+        check("productdescription", "กรอกคำอธิบายให้ถูกต้อง").isLength({
+          min: 5,
+        }),
+        check("productprice", "กรอกราคาให้ถูกต้อง").isInt({ gt: 0 }),
       ];
     }
   }
